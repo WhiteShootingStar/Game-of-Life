@@ -60,15 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CursorControl\Examples\CursorControlExample.cs" />
     <Compile Include="Assets\Scripts\CanvasScript.cs" />
     <Compile Include="Assets\Scripts\Initializing.cs" />
     <Compile Include="Assets\Scripts\PlayerPrefs.cs" />
     <Compile Include="Assets\Scripts\Point.cs" />
     <Compile Include="Assets\Scripts\SliderScript.cs" />
     <Compile Include="Assets\Scripts\TextScript.cs" />
-    <None Include="Assets\CursorControl\LICENSE.txt" />
-    <None Include="Assets\CursorControl\README.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/unity/project/Game of Life/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -293,9 +290,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/unity/project/Game of Life/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="CursorControl">
-      <HintPath>D:/unity/project/Game of Life/Assets/CursorControl/Scripts/CursorControl.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

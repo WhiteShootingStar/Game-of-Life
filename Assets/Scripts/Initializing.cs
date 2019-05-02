@@ -123,11 +123,13 @@ public class Initializing : MonoBehaviour
 
     public void ReloadLevel()
     {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        var currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadSceneAsync(currentScene);
         Point.toStart = false;
     }
     public void goBack()
     {
         SceneManager.LoadSceneAsync(0);
+        Point.toStart = false;
     }
 }

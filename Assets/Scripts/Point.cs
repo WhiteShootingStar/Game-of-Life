@@ -109,10 +109,10 @@ public class Point : MonoBehaviour
                 {
                     int y = i;
                     int x = k;
-                    if (y < 0) y += array.GetLength(0) - 1;
+                    if (y < 0) y += array.GetLength(0) ;
                     else if (y >= array.GetLength(0)) y -= array.GetLength(0);
 
-                    if (x < 0) x += array.GetLength(1) - 1;
+                    if (x < 0) x += array.GetLength(1) ;
                     else if (x >= array.GetLength(1)) x -= array.GetLength(1);
 
 
@@ -134,10 +134,10 @@ public class Point : MonoBehaviour
                 {
                     int y = i;
                     int x = k;
-                    if (y < 0) y += array.GetLength(0) - 1;
+                    if (y < 0) y += array.GetLength(0) ;
                     else if (y >= array.GetLength(0)) y -= array.GetLength(0);
 
-                    if (x < 0) x += array.GetLength(1) - 1;
+                    if (x < 0) x += array.GetLength(1) ;
                     else if (x >= array.GetLength(1)) x -= array.GetLength(1);
 
 
@@ -152,52 +152,7 @@ public class Point : MonoBehaviour
         }
     }
 
-    public int GetLivingNeighbors(int x, int y)
-    {
-        int count = 0;
-
-        // Check cell on the right.
-        if (x != xPos - 1)
-            if (array[x + 1, y].IsAlive())
-                count++;
-
-        // Check cell on the bottom right.
-        if (x != xPos - 1 && y != yPos - 1)
-            if (array[x /*+ 1,*/, y /*+ 1*/].IsAlive())
-                count++;
-
-        // Check cell on the bottom.
-        if (y != yPos - 1)
-            if (array[x, y + 1].IsAlive())
-                count++;
-
-        // Check cell on the bottom left.
-        if (x != 0 && y != yPos - 1)
-            if (array[x - 1, y + 1].IsAlive())
-                count++;
-
-        // Check cell on the left.
-        if (x != 0)
-            if (array[x - 1, y].IsAlive())
-                count++;
-
-        // Check cell on the top left.
-        if (x != 0 && y != 0)
-            if (array[x - 1, y - 1].IsAlive())
-                count++;
-
-        // Check cell on the top.
-        if (y != 0)
-            if (array[x, y - 1].IsAlive())
-                count++;
-
-        // Check cell on the top right.
-        if (x != xPos - 1 && y != 0)
-            if (array[x + 1, y - 1].IsAlive())
-                count++;
-
-        return count;
-    }
+    
 
     public bool IsAlive()
     {

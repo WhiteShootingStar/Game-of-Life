@@ -48,9 +48,9 @@ public class Initializing : MonoBehaviour
     {
         
     }
-
+    
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {

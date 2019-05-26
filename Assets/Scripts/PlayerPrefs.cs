@@ -6,4 +6,5 @@ public static class PlayerPrefs
 {
     public static int Width, Heigth;
     public static Color color;
+    public static Rules rules;
 }

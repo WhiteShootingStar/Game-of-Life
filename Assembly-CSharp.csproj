@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Initializing.cs" />
     <Compile Include="Assets\Scripts\PlayerPrefs.cs" />
     <Compile Include="Assets\Scripts\Point.cs" />
+    <Compile Include="Assets\Scripts\Rules.cs" />
     <Compile Include="Assets\Scripts\SliderScript.cs" />
     <Compile Include="Assets\Scripts\TextScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

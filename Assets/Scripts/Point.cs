@@ -12,6 +12,7 @@ public class Point : MonoBehaviour
     public bool isAlive = false;
     public static MouseDrawMode drawMode;
     private Color color = PlayerPrefs.color;
+    private Rules rules;
   
     //public static
     // Start is called before the first frame update
@@ -25,6 +26,11 @@ public class Point : MonoBehaviour
         material = GetComponent<Renderer>().material;
         drawMode = MouseDrawMode.Pressing;
         material.color = Color.white;
+        rules = PlayerPrefs.rules;
+        rules.ForAlive.ForEach(e => Debug.Log(e));
+        Debug.Log("live ones");
+        rules.ForDead.ForEach(e => Debug.Log(e));
+      
     }
 
     // Update is called once per frame
@@ -123,7 +129,8 @@ public class Point : MonoBehaviour
                 }
             }
             // print(counter - 1 + " for continue liveing");
-            return counter - 1 < 4 && counter - 1 > 1 ? false : true;
+           //return counter-1  < 4 && counter -1 > 1 ? false : true;
+            return !rules.ForAliveToLive(counter -1);
         }
         else
         {
@@ -148,7 +155,8 @@ public class Point : MonoBehaviour
                 }
             }
             print(counter - 1 + " for getting birthted at " + xPos + " " + yPos);
-            return counter - 1 != 2;
+           //return counter-1  !=2;
+            return !rules.ForDeadToBorn(counter );
         }
     }
 
